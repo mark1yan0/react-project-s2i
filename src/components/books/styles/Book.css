@@ -1,0 +1,104 @@
+.book {
+  position: relative;
+  border-radius: 25px;
+  transition: all 1s ease;
+  margin: 2em;
+}
+
+.book:hover .book__overlay p,
+.book:hover .book__overlay h3 {
+  visibility: visible;
+}
+
+/* image 
+===========================================================*/
+.book__thumbnail {
+  width: 250px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+/* overlay 
+===========================================================*/
+.book__overlay {
+  border-radius: 0 0 25px 25px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  background: #775078d8;
+  color: white;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+
+.book:hover .book__overlay {
+  opacity: 1;
+  visibility: visible;
+  height: 40%;
+}
+
+/* show overlay if menu opened */
+.book__overlay .keep__showing {
+  opacity: 1;
+  visibility: visible;
+  height: 40%;
+}
+
+/* text */
+.book__overlay .book__overlay__text {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.book__overlay .book__overlay__text p,
+.book__overlay .book__overlay__text h3 {
+  visibility: hidden;
+  transition: all 0.4s ease-out;
+}
+
+.book__overlay .book__overlay__text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.3em;
+}
+
+.book__overlay .book__overlay__text p {
+  font-size: 1.1rem;
+}
+
+.book__icon__expand {
+  font-size: 3rem;
+  color: #ffce21;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.book__icon__expand:hover {
+  transform: scale(1.5);
+}
+
+/* fav book
+============================*/
+
+.book__fav .book__thumbnail__fav {
+  width: 100%;
+}
+
+.book__overlay__fav {
+  opacity: 1;
+  visibility: visible;
+  height: 40%;
+}
+
+.book__overlay__fav .book__overlay__text p,
+.book__overlay__fav .book__overlay__text h3 {
+  opacity: 1;
+  visibility: visible;
+}

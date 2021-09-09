@@ -1,0 +1,50 @@
+.btn {
+  cursor: pointer;
+  padding: 1em;
+  margin: 1em 1.5em 1em 0;
+  border: none;
+  background: #775078;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto Mono', monospace,
+    sans-serif;
+  font-size: 1.5rem;
+}
+
+/*library icons*/
+.book__icon__exp__li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.book__icon__exp__li p {
+  font-size: 1.5rem;
+  flex: 2;
+}
+
+.book__icon__exp__li:hover {
+  transform: scale(1.07);
+}
+
+/* icons  */
+.book__icon__fav,
+.book__icon__shop,
+.book__icon__read {
+  font-size: 2rem;
+  margin-right: 1em;
+  color: #ffce21;
+  cursor: pointer;
+}
+
+/*state changes*/
+.is__fav {
+  /* if favourite */
+  color: #ff5a5a;
+}
+
+.book__read {
+  color: rgb(0, 253, 0);
+}

@@ -1,0 +1,29 @@
+/* overlay  expanded
+===========================================*/
+.book__overlay__expanded {
+  border-radius: 25px 25px 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 61%;
+  /* overflow: hidden; */
+  background: #775078d8;
+  padding: 2em;
+  transition: all 0.7s ease-out;
+}
+
+/* expanded list */
+.book__overlay__expanded .book__exp__list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.book__icon__shop {
+  font-size: 2rem;
+  margin-right: 1em;
+  color: #ffce21;
+  cursor: pointer;
+}

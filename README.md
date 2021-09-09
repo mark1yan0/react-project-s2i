@@ -68,3 +68,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+API : https://developers.google.com/books/docs/overview
+apikey=AIzaSyAFlyQmxsFmIm1Ut3ku_xrAMLPB8CJVS6k
+Axios
+React router
+context API per una parte di state
+react-redux per un'altra parte di state
+firebase per autenticazione e hosting

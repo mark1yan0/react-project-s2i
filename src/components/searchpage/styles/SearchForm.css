@@ -2,17 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-/* input container */
-.search__form__input {
-  flex: 2;
   position: relative;
 }
 
 /*input*/
 .search__input {
-  width: 90%;
+  width: 100%;
   margin-left: 0;
 }
 
@@ -26,8 +21,8 @@ input[type='search' i]::-webkit-search-cancel-button {
 .search__icon {
   font-size: 3rem;
   position: absolute;
-  right: 85px;
-  bottom: 16px;
+  right: 20px;
+  bottom: 15px;
   cursor: pointer;
 }
 

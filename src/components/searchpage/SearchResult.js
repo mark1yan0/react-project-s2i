@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import './styles/SearchResult.css';
 //icons
-import { FaHeart } from 'react-icons/fa';
-import { FaShoppingBag } from 'react-icons/fa';
-import { BsFillBookmarkFill } from 'react-icons/bs';
+import FavIcon from '../buttons/FavIcon';
+import ShopIcon from '../buttons/ShopIcon';
+import ReadIcon from '../buttons/ReadIcon';
 
-const SearchResult = ({ thumbnail, title, author, category }) => {
-  thumbnail =
-    'https://images.unsplash.com/photo-1545696648-86c761bc5410?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1053&q=80';
-
+const SearchResult = ({ thumbnail, title, author, category, targetBook }) => {
   //icons starte
   const [isFav, setIsFav] = useState(false);
   const [toRead, setToRead] = useState(false);
@@ -21,23 +18,17 @@ const SearchResult = ({ thumbnail, title, author, category }) => {
         alt={`Immagine di copertina: ${title}`}
       />
       <div className='result__info'>
-        <h3>{title}Titolo</h3>
-        <p>{author} Autore</p>
+        <h3>{title}</h3>
+        <p>{author}</p>
         <div>
-          <p>{category} Categoria</p>
+          <p>{category}</p>
         </div>
       </div>
 
       <div className='result__icons'>
-        <FaHeart
-          className={`result__incon__heart ${isFav && 'icon__heart__isFav'}`}
-          onClick={() => setIsFav(!isFav)}
-        />
-        <FaShoppingBag className='result__incon__shopping' />
-        <BsFillBookmarkFill
-          className={`result__incon__read ${toRead && 'icon__read__toRead'}`}
-          onClick={() => setToRead(!toRead)}
-        />
+        <FavIcon search={true} targetBook={targetBook} />
+        <ShopIcon search={true} />
+        <ReadIcon search={true} targetBook={targetBook} />
       </div>
     </div>
   );

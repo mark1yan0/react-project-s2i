@@ -5,7 +5,7 @@ import { BsFillBookmarkFill } from 'react-icons/bs';
 //state
 import { LibraryContext } from '../context/LibraryProvider';
 
-const ToReadIcon = ({ targetBook, read }) => {
+const ReadIcon = ({ targetBook, read, search }) => {
   //library context
   const [library, setLibrary] = useContext(LibraryContext);
 
@@ -38,11 +38,11 @@ const ToReadIcon = ({ targetBook, read }) => {
   return (
     <li className='book__icon__exp__li' onClick={() => addToRead()}>
       <BsFillBookmarkFill
-        className={`book__icon__read ${read && 'book__read'}`}
+        className={`book__icon__read ${read && 'book__read'} `}
       />
-      <p>{read ? 'Letto' : 'Segna come letto'}</p>
+      {search ? '' : <p>{read ? 'Letto' : 'Segna come letto'}</p>}
     </li>
   );
 };
 
-export default ToReadIcon;
+export default ReadIcon;

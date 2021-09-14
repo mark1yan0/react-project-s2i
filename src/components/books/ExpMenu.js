@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './styles/ExpMenu.css';
 //components
 import FavIcon from '../buttons/FavIcon';
-import ToReadIcon from '../buttons/ToReadIcon';
+import ReadIcon from '../buttons/ReadIcon';
 import ShopIcon from '../buttons/ShopIcon';
+import { BooksContext } from '../context/BooksProvider';
 
 const ExpMenu = ({ targetBook, favourite, read }) => {
+  const [favouriteIcon, setFavouriteIcon] = useContext(BooksContext);
+
   return (
     <div
       className={`book__overlay__expanded ${
@@ -15,7 +18,7 @@ const ExpMenu = ({ targetBook, favourite, read }) => {
       <ul className='book__exp__list'>
         <FavIcon favourite={favourite} targetBook={targetBook} />
         <ShopIcon />
-        <ToReadIcon targetBook={targetBook} read={read} />
+        <ReadIcon targetBook={targetBook} read={read} />
       </ul>
     </div>
   );

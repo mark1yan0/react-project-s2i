@@ -3,10 +3,11 @@ import './styles/Button.css';
 //icons
 import { FaShoppingBag } from 'react-icons/fa';
 
-const ShopIcon = () => {
+const ShopIcon = ({ search }) => {
   return (
     <li className='book__icon__exp__li'>
-      <FaShoppingBag className='book__icon__shop' /> <p>Voglio acquistarlo</p>
+      <FaShoppingBag className={`book__icon__shop`} />
+      {search ? '' : <p>Voglio acquistarlo</p>}
     </li>
   );
 };

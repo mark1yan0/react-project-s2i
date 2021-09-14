@@ -1,5 +1,7 @@
 import React, { useState, useEffect, createContext } from 'react';
-import axios from 'axios';
+
+import { fetchData } from './api';
+// import { fetchData } from './vendor';
 
 export const BooksContext = createContext();
 
@@ -7,25 +9,13 @@ const BooksProvider = props => {
   //books state
   const [books, setBooks] = useState([]);
 
-  const key = 'AIzaSyAFlyQmxsFmIm1Ut3ku_xrAMLPB8CJVS6k';
-  //per la query
-  let query = 'Harry Potter';
-  const api = `https://www.googleapis.com/books/v1/volumes?q=${query}+subject:&maxResults=10&printType=books&key=${key}`;
-
   //fetching data
-  async function fetchData() {
-    try {
-      const data = await axios.get(api);
-      return data;
-    } catch (error) {
-      console.log(error);
-    }
-  }
 
   useEffect(() => {
     //getting books
+
     async function getBooks() {
-      const data = await fetchData();
+      const data = await fetchData('Se questo è un uomo');
 
       let items = data.data.items;
 
@@ -33,16 +23,22 @@ const BooksProvider = props => {
         return {
           title: item.volumeInfo.title,
           thumbnail: item.volumeInfo.imageLinks.thumbnail,
-          author: item.volumeInfo.authors[0],
+          author: item.volumeInfo.authors,
           date: item.volumeInfo.publishedDate,
-          category: item.volumeInfo.categories[0],
+          category: item.volumeInfo.categories,
           description: item.volumeInfo.description,
           id: item.id,
           favourite: false,
           read: false,
         };
       });
-      setBooks(filteredItems);
+
+      //filtering out undefiened data
+      setBooks(
+        filteredItems.filter(
+          item => item.thumnail == undefined && item.author !== undefined
+        )
+      );
     }
 
     getBooks();

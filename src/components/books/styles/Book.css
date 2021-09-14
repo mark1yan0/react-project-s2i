@@ -59,9 +59,10 @@
   flex-direction: column;
 }
 .book__overlay .book__overlay__text p,
-.book__overlay .book__overlay__text h3 {
+.book__overlay .book__overlay__text a {
   visibility: hidden;
   transition: all 0.4s ease-out;
+  color: white;
 }
 
 .book__overlay .book__overlay__text h3 {

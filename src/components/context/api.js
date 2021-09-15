@@ -4,7 +4,7 @@ export default class Api {
   constructor(query, field) {
     this.query = query;
     this.field = field;
-    this.key = 'AIzaSyAFlyQmxsFmIm1Ut3ku_xrAMLPB8CJVS6k';
+    this.key = process.env.REACT_APP_API_KEY;
   }
 
   getQuery(query, field) {

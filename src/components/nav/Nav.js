@@ -19,28 +19,15 @@ const Nav = () => {
     });
   }, []);
 
-  function showLibrary() {
-    let library = document.querySelector('.library');
-
-    if (library.classList.contains('library__active')) {
-      library.classList.remove('library__active');
-    } else {
-      library.classList.add('library__active');
-    }
-  }
-
   return (
     <nav className={`navigation ${scroll && 'navigation__scroll__active'}`}>
       <Link to='/'>
-        <h1 id='logo'>Logo</h1>{' '}
+        <h1 id='logo'>A book's good</h1>{' '}
       </Link>
       {/* <img className='nav__logo' /> */}
       <ul className='nav__items'>
         <li>
           <Link to='/'>Home</Link>
-        </li>
-        <li onClick={showLibrary}>
-          <p className='nav__library'>Libreria</p>
         </li>
         <li>
           <Link to='/search'>

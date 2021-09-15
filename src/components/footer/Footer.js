@@ -4,7 +4,9 @@ import './styles/Footer.css';
 const Footer = () => {
   return (
     <footer>
-      <h1>This is the footer</h1>
+      <h3>Progetto React start2Impact, Markiyan Kmit </h3>
+      <a href='https://github.com/mark1yan0/'>GitHub</a>
+      <a href='https://mark1yan0.github.io/protfolio-repo/'>Portfolio</a>
     </footer>
   );
 };

@@ -13,7 +13,7 @@ const SearchPage = () => {
   async function searchBooks(e) {
     e.preventDefault();
     let search = document.querySelector('.search__input');
-    const data = await fetchData(search.value);
+    const data = await fetchData(search.value, 'subject');
 
     let items = data.data.items;
 

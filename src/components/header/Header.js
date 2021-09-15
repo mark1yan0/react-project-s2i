@@ -35,7 +35,7 @@ const Header = () => {
         <h2>{hero !== undefined && hero.title} </h2>
         <p>{hero !== undefined && truncate(hero.description, 150)}</p>
         <div className='header__buttons'>
-          <Link to='/singlepage'>
+          <Link to={{ pathname: '/singlepage', state: hero }}>
             <Button type='button' text='Interessante...' />{' '}
           </Link>
           <Button
@@ -44,6 +44,7 @@ const Header = () => {
             }
             type='button'
             text='Mostra Altro'
+            muted={true}
           />
         </div>
       </div>

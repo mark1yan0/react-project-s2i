@@ -11,15 +11,6 @@
   transition: 0.3s ease;
 }
 
-.result:hover {
-  background: #775078b2;
-  color: white;
-}
-
-.result:hover .result__icons {
-  color: white;
-}
-
 /* thumbnail */
 .result__thumbnail {
   width: 100px;
@@ -34,29 +25,13 @@
   height: 100%;
 }
 
-/* icons */
-.result .result__icons {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  font-size: 3rem;
-  color: #775078;
-  cursor: pointer;
+.result .result__info a {
+  color: #474747;
+  transition: 0.3s ease;
 }
 
-.result__icons .result__incon__heart:hover {
-  color: #ff5a5a;
-}
-
-.icon__heart__isFav {
-  color: #ff5a5a;
-}
-
-.result__icons .result__incon__read:hover {
-  color: grey;
-}
-
-.icon__read__toRead {
-  color: grey;
+.result:hover,
+.result:hover a {
+  background: #775078b2;
+  color: white;
 }

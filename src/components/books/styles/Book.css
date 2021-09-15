@@ -33,7 +33,7 @@
   color: white;
   padding: 2em;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s ease-out;
@@ -45,61 +45,19 @@
   height: 40%;
 }
 
-/* show overlay if menu opened */
-.book__overlay .keep__showing {
-  opacity: 1;
-  visibility: visible;
-  height: 40%;
-}
-
 /* text */
-.book__overlay .book__overlay__text {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-}
-.book__overlay .book__overlay__text p,
-.book__overlay .book__overlay__text a {
+.book__overlay p,
+.book__overlay a {
   visibility: hidden;
   transition: all 0.4s ease-out;
   color: white;
 }
 
-.book__overlay .book__overlay__text h3 {
+.book__overlay h3 {
   font-size: 1.5rem;
   margin-bottom: 0.3em;
 }
 
-.book__overlay .book__overlay__text p {
+.book__overlay p {
   font-size: 1.1rem;
-}
-
-.book__icon__expand {
-  font-size: 3rem;
-  color: #ffce21;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.book__icon__expand:hover {
-  transform: scale(1.5);
-}
-
-/* fav book
-============================*/
-
-.book__fav .book__thumbnail__fav {
-  width: 100%;
-}
-
-.book__overlay__fav {
-  opacity: 1;
-  visibility: visible;
-  height: 40%;
-}
-
-.book__overlay__fav .book__overlay__text p,
-.book__overlay__fav .book__overlay__text h3 {
-  opacity: 1;
-  visibility: visible;
 }

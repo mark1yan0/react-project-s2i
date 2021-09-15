@@ -29,16 +29,3 @@ input[type='search' i]::-webkit-search-cancel-button {
 .search__icon:hover {
   color: #775078;
 }
-
-/* filter button */
-.category__filter {
-  outline: 0;
-  box-shadow: none;
-  border: 0 !important;
-  text-align: center;
-  width: 12%;
-  color: #775078;
-  cursor: pointer;
-  padding: 1em 0.5em;
-  border-radius: 5px;
-}

@@ -23,3 +23,10 @@
   font-size: 3rem;
   text-align: center;
 }
+
+@media only screen and (max-width: 700px) {
+  .search__page {
+    width: 100%;
+    padding: 2em;
+  }
+}

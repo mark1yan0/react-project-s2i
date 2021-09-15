@@ -1,5 +1,6 @@
 .search__page {
   width: 70%;
+  min-height: 80vh;
 }
 
 .search__heading {

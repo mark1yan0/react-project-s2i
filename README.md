@@ -1,78 +1,40 @@
-# Getting Started with Create React App
+<h1>Start2Impact progetto React</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h5>Table of Contents</h5>
+<ol>
+    <li><a href="#about">Riguardo il progetto</a>
+        <ul>
+            <li><a href="#built">Costruito con</a></li>
+        </ul>
+    </li>
+    <li><a href="#usage">Utilizzo</a></li>
+    <li><a href="#contact">Contatti</a></li>
+    <li><a href="#considerations">Considerazioni finali</a></li>
+</ol>
 
-## Available Scripts
+<h3 id="about">Riguardo il progetto</h3>
+<p>Il progetto consiste in una semplice App che sfrutta la Google Book API per permettere la ricerca e la visualizzazione dei libri disponibile nell'api.</p>
 
-In the project directory, you can run:
+<h4 id="built">Costruito con</h4>
+<p>Ovviamente l'app è stata costruita con React e le seguenti principali tecnologie:</p>
 
-### `npm start`
+<ul>
+    <li><a href="#">React Router</a> per il routing</li>
+    <li><a href="#">React Icons</a> per le icone</li>
+    <li><a href="#">Axios</a> per la get request di google books api</li>
+    <li><a href="#">Context Api</a> per creare uno store globale dei libri. Penso che questo sia un progetto abbastanza piccolo per redux</li>
+    <li><a href="#">Firebase</a> per l'hosting dell'app</li>
+</ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h3 id="usage">Getting Started</h3>
+<p>L'utilizzo dell'app è abbastanza semplice: appena compare a schermo, nel header è presente un libro scelto randomicamente, e grazie ai due bottoni è possibile visualizzare il libro o farne comparire un altro</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<p>Subito sotto è presente una fila di libri. Inizialmente volevo presentare diverse file con diversi tipi di libri ma purtroppo non mi sono per niente trovato bene col l'API di google e non sono riuscito ad implementare completamente tutte le feature che volevo</p>
 
-### `npm test`
+<h3 id="contact">Contact</h3>
+<p>Markiyan Kmit - https://www.instagram.com/markkmit/ - markkmit@gmail.com</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p>Project Link: https://github.com/your_username/repo_name</p>
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-API : https://developers.google.com/books/docs/overview
-apikey=AIzaSyAFlyQmxsFmIm1Ut3ku_xrAMLPB8CJVS6k
-Axios
-React router
-context API per una parte di state
-react-redux per un'altra parte di state
-firebase per autenticazione e hosting
+<h3 id="considerations">Considerazioni finali</h3>
+<p>Personalmente non mi sono trovato per nulla a mio agio con l'api di google. Il metodo di ricerca mi sembra abbstanza gestito male, soprattutto quando come risultato arrivano anche libri che non c'entrano nulla con ciò che si cerca e che presentano delle lacune nei dati, come per esempio un immagine mancante, rompendo così l'intera app. Ho cercato di implementare qualche tipo di controllo ma anche se mi sempra logicamente corretto, comunque si presentano situazione di disagio.</p>

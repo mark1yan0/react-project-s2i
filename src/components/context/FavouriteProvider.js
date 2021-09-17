@@ -3,16 +3,26 @@ import AppReducer from './AppReducer';
 
 //initial state
 const initialState = {
-  favourites: [],
-  read: [],
+  favourites: localStorage.getItem('favourites')
+    ? JSON.parse(localStorage.getItem('favourites'))
+    : [],
+  read: localStorage.getItem('read')
+    ? JSON.parse(localStorage.getItem('read'))
+    : [],
 };
 
 //create context
-export const LibraryContext = createContext(initialState);
+export const FavouriteContext = createContext(initialState);
 
 //provider components
-export const LibraryProvider = props => {
+export const FavouriteProvider = props => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
+
+  //add to local storage
+  useEffect(() => {
+    localStorage.setItem('favourites', JSON.stringify(state.favourites));
+    localStorage.setItem('read', JSON.stringify(state.read));
+  }, [state]);
 
   //actions
   const addBookToFavourites = book => {
@@ -32,7 +42,7 @@ export const LibraryProvider = props => {
   };
 
   return (
-    <LibraryContext.Provider
+    <FavouriteContext.Provider
       value={{
         favourites: state.favourites,
         read: state.read,
@@ -43,6 +53,6 @@ export const LibraryProvider = props => {
       }}
     >
       {props.children}
-    </LibraryContext.Provider>
+    </FavouriteContext.Provider>
   );
 };

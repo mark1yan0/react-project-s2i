@@ -40,6 +40,7 @@ header {
   header {
     display: flex;
     flex-direction: column;
+    padding-top: 10vh;
   }
 
   .header__book__container {

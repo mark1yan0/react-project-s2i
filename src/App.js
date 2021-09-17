@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 //state
 import BooksProvider from './components/context/BooksProvider';
-import { LibraryProvider } from './components/context/LibraryProvider';
+import { FavouriteProvider } from './components/context/FavouriteProvider';
 //components
 import Nav from './components/nav/Nav';
 import Header from './components/header/Header';
@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <BooksProvider>
-        <LibraryProvider>
+        <FavouriteProvider>
           <div className='App'>
             <Nav />
 
@@ -40,7 +40,7 @@ function App() {
             </Switch>
             <Footer />
           </div>
-        </LibraryProvider>
+        </FavouriteProvider>
       </BooksProvider>
     </Router>
   );

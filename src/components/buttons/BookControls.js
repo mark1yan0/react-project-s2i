@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { LibraryContext } from '../context/LibraryProvider';
+import { FavouriteContext } from '../context/FavouriteProvider';
 //Icons
 import { AiFillHeart } from 'react-icons/ai';
 import { AiOutlineHeart } from 'react-icons/ai';
@@ -14,7 +14,7 @@ const BookControls = ({ type, targetBook }) => {
     setBookAsRead,
     setBookAsNotRead,
     read,
-  } = useContext(LibraryContext);
+  } = useContext(FavouriteContext);
   let favouriteBook = favourites.find(book => book?.id === targetBook?.id);
   let readBook = read.find(book => book?.id === targetBook?.id);
 

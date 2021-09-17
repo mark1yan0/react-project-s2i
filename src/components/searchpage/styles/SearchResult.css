@@ -1,10 +1,10 @@
 .result {
   width: 100%;
-  height: 150px;
+  min-height: 150px;
   border-radius: 25px;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+
   background: rgba(226, 207, 0, 0.745);
   margin: 2em 0;
   padding: 1.5em;
@@ -34,4 +34,10 @@
 .result:hover a {
   background: #775078b2;
   color: white;
+}
+
+@media only screen and (max-width: 700px) {
+  .result__info h3 {
+    font-size: 1.6rem;
+  }
 }

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import './styles/Row.css';
 //state
 import { BooksContext } from '../context/BooksProvider';
-import { LibraryContext } from '../context/LibraryProvider';
+import { FavouriteContext } from '../context/FavouriteProvider';
 //components
 import Book from './Book';
 
@@ -10,7 +10,7 @@ const Row = ({ title, type }) => {
   //book state
   const [books, setBooks] = useContext(BooksContext);
   //library state
-  const { favourites } = useContext(LibraryContext);
+  const { favourites } = useContext(FavouriteContext);
 
   return (
     <section id={type === 'favourites' ? 'favourites' : ''} className='row'>

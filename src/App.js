@@ -23,8 +23,8 @@ function App() {
               <Route exact path='/'>
                 <Header />
                 <section className='content__section'>
-                  <Row title='Altro' type='row' />
                   <Row title='Preferiti' type='favourites' />
+                  <Row title='Altro' type='row' />
                 </section>
               </Route>
 

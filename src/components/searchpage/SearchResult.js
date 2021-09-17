@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './styles/SearchResult.css';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-//icons
+//components
+import BookControls from '../buttons/BookControls';
 
-const SearchResult = ({ thumbnail, title, author, category, targetBook }) => {
+const SearchResult = ({
+  thumbnail,
+  title,
+  author,
+  category,
+  targetBook,
+  type,
+}) => {
   return (
     <div className='result'>
       <img
@@ -20,6 +28,7 @@ const SearchResult = ({ thumbnail, title, author, category, targetBook }) => {
         <div>
           <p>{category}</p>
         </div>
+        <BookControls type={type} targetBook={targetBook} />
       </div>
     </div>
   );

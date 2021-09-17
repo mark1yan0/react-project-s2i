@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './styles/Nav.css';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 //icons
 import { FaSistrix } from 'react-icons/fa';
 //components
@@ -28,6 +29,11 @@ const Nav = () => {
       <ul className='nav__items'>
         <li>
           <Link to='/'>Home</Link>
+        </li>
+        <li>
+          <HashLink smooth to='/#favourites'>
+            Preferiti
+          </HashLink>
         </li>
         <li>
           <Link to='/search'>

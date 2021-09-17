@@ -19,10 +19,10 @@
 <p>Ovviamente l'app è stata costruita con React e le seguenti principali tecnologie:</p>
 
 <ul>
-    <li><a href="#">React Router</a> per il routing</li>
+    <li><a href="#">React Router e React Router Hash Link</a> per il routing</li>
     <li><a href="#">React Icons</a> per le icone</li>
     <li><a href="#">Axios</a> per la get request di google books api</li>
-    <li><a href="#">Context Api</a> per creare uno store globale dei libri. Penso che questo sia un progetto abbastanza piccolo per redux</li>
+    <li><a href="#">Context Api</a> per creare uno store globale dei libri ma soprattutto per gestire la libreria dei preferiti e libri letti</li>
     <li><a href="#">Firebase</a> per l'hosting dell'app</li>
 </ul>
 

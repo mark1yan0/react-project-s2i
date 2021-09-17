@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 //state
 import BooksProvider from './components/context/BooksProvider';
+import { LibraryProvider } from './components/context/LibraryProvider';
 //components
 import Nav from './components/nav/Nav';
 import Header from './components/header/Header';
@@ -14,29 +15,32 @@ function App() {
   return (
     <Router>
       <BooksProvider>
-        <div className='App'>
-          <Nav />
+        <LibraryProvider>
+          <div className='App'>
+            <Nav />
 
-          <Switch>
-            <Route exact path='/'>
-              <Header />
-              <section className='content__section'>
-                <Row title='Altro' />
+            <Switch>
+              <Route exact path='/'>
+                <Header />
+                <section className='content__section'>
+                  <Row title='Altro' type='row' />
+                  <Row title='Preferiti' type='favourites' />
+                </section>
+              </Route>
+
+              <section className='content__section__single'>
+                <Route path='/singlepage'>
+                  <SinglePage />
+                </Route>
+
+                <Route path='/search'>
+                  <SearchPage />
+                </Route>
               </section>
-            </Route>
-
-            <section className='content__section__single'>
-              <Route path='/singlepage'>
-                <SinglePage />
-              </Route>
-
-              <Route path='/search'>
-                <SearchPage />
-              </Route>
-            </section>
-          </Switch>
-          <Footer />
-        </div>
+            </Switch>
+            <Footer />
+          </div>
+        </LibraryProvider>
       </BooksProvider>
     </Router>
   );

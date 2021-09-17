@@ -1,8 +1,10 @@
 import React from 'react';
 import './styles/Book.css';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
+//components
+import BookControls from '../buttons/BookControls';
 
-const Book = ({ thumbnail, title, author, category, targetBook }) => {
+const Book = ({ thumbnail, title, author, category, targetBook, type }) => {
   function truncate(str, n) {
     //tronca testo dopo n lettere
     return str?.length > n ? str.substr(0, n - 1) + '...' : str;
@@ -18,6 +20,7 @@ const Book = ({ thumbnail, title, author, category, targetBook }) => {
         </Link>
         <p>{author}</p>
         <p id='book__category'>{category}</p>
+        <BookControls type={type} targetBook={targetBook} />
       </div>
     </div>
   );

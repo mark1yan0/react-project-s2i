@@ -59,6 +59,7 @@ const SearchPage = () => {
               author={result.author}
               category={result.category}
               targetBook={result}
+              type='search'
             />
           ))
         )}

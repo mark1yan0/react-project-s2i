@@ -22,3 +22,28 @@
 .muted:hover {
   transform: scale(1.1);
 }
+
+/*book controls__container*/
+.controls__container {
+  width: 100%;
+}
+
+.fav__control,
+.read__control {
+  font-size: 3rem;
+  margin: 0.1em;
+  transition: 0.3s ease;
+}
+
+.fav__control {
+  color: rgb(255, 62, 62);
+}
+
+.read__control {
+  color: rgb(0, 255, 21);
+}
+
+.fav__control:hover,
+.read__control:hover {
+  transform: scale(1.1);
+}

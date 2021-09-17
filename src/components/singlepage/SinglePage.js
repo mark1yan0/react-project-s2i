@@ -1,7 +1,8 @@
 import React from 'react';
 import './style/SinglePage.css';
 import { useLocation } from 'react-router-dom';
-//icons
+//components
+import BookControls from '../buttons/BookControls';
 
 const SinglePage = () => {
   const location = useLocation();
@@ -28,8 +29,8 @@ const SinglePage = () => {
           <br />
           <p className='single__head__date'>
             Anno di pubblicazione: {targetBook.date}
-          </p>{' '}
-          <br />
+          </p>
+          <BookControls type={'single'} targetBook={targetBook} />
         </div>
       </div>
       <p className='single__sinossi'>{targetBook.description}</p> <br />

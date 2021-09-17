@@ -56,7 +56,7 @@
 <h2 id="contact">Contact</h2>
 <p>Markiyan Kmit - https://www.instagram.com/markkmit/ - markkmit@gmail.com</p>
 
-<p>Project Link: https://github.com/your_username/repo_name</p>
+<p>Project Link: https://react-books-321518.web.app/</p>
 
 <h2 id="considerations">Considerazioni finali</h2>
 <p>Personalmente non mi sono trovato per nulla a mio agio con l'api di google. Il metodo di ricerca mi sembra abbstanza gestito male, soprattutto quando come risultato arrivano anche libri che non c'entrano nulla con ciò che si cerca e che presentano delle lacune nei dati, come per esempio un immagine mancante, rompendo così l'intera app. Ho cercato di implementare qualche tipo di controllo ma anche se mi sempra logicamente corretto, comunque si presentano situazione di disagio.</p>

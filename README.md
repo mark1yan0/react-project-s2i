@@ -6,7 +6,6 @@
     <li><a href="#built">Costruito con</a></li>
     <li><a href="#usage">Utilizzo</a></li>
     <li><a href="#contact">Contatti</a></li>
-    <li><a href="#considerations">Considerazioni finali</a></li>
 </ol>
 
 <h2 id="about">Riguardo il progetto</h2>
@@ -46,7 +45,7 @@
 <p>Axios semplifica le chiamate delle api e si è rivelato molto comodo da usare</p>
 
 <h3 id='context'>Context API</h3>
-<p>Ho preferito usare la context Api, a discapito di redux, perchè ritengo per questa sia più comoda da usare per gestire state meno complessi, come in questo caso. Redux può essere molto prolisso per fare anche una semplice azione.</p>
+<p>Ho preferito usare la context Api, a discapito di redux, perchè ritengo per questa sia più comoda da usare per gestire state meno complessi, come in questo caso.</p>
 
 <p>In ogni caso ho usato context solamente per la selezione iniziale di libri e per gestire tutti i cambiamenti di state dei preferiti. La dove lo state si limitava ad essere presente in un unica componente, non ho creato un contesto apposta poichè mi sembrava troppo prolisso. Preferisco tenere lo state semplice nei punti in cui viene effettivamente usato.</p>
 
@@ -57,6 +56,3 @@
 <p>Markiyan Kmit - https://www.instagram.com/markkmit/ - markkmit@gmail.com</p>
 
 <p>Project Link: https://react-books-321518.web.app/</p>
-
-<h2 id="considerations">Considerazioni finali</h2>
-<p>Personalmente non mi sono trovato per nulla a mio agio con l'api di google. Il metodo di ricerca mi sembra abbstanza gestito male, soprattutto quando come risultato arrivano anche libri che non c'entrano nulla con ciò che si cerca e che presentano delle lacune nei dati, come per esempio un immagine mancante, rompendo così l'intera app. Ho cercato di implementare qualche tipo di controllo ma anche se mi sempra logicamente corretto, comunque si presentano situazione di disagio.</p>

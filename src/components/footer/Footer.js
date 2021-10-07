@@ -6,7 +6,7 @@ const Footer = () => {
     <footer>
       <h3>Progetto React start2Impact, Markiyan Kmit </h3>
       <a href='https://github.com/mark1yan0/'>GitHub</a>
-      <a href='https://mark1yan0.github.io/protfolio-repo/'>Portfolio</a>
+      <a href='https://mark1yan0.github.io/portfolio-repo/'>Portfolio</a>
     </footer>
   );
 };

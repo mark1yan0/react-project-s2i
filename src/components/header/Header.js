@@ -36,14 +36,14 @@ const Header = () => {
         <p>{hero !== undefined && truncate(hero.description, 150)}</p>
         <div className='header__buttons'>
           <Link to={{ pathname: '/singlepage', state: hero }}>
-            <Button type='button' text='Interessante...' />{' '}
+            <Button type='button' text='Mostra il libro in evidenza' />{' '}
           </Link>
           <Button
             event={() =>
               setHero(books[Math.floor(Math.random() * books.length)])
             }
             type='button'
-            text='Mostra Altro'
+            text='Mostra altro'
             muted={true}
           />
         </div>

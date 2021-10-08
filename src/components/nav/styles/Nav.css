@@ -8,6 +8,7 @@
   padding: 2em 3em;
   z-index: 9;
   transition: 0.6s ease;
+  background: #77507891;
 }
 
 #logo {
@@ -45,7 +46,7 @@
 
 .navigation__scroll__active,
 .navigation__scroll__active .nav__items li a:visited {
-  background: #77507891;
+  background: #775078;
   color: white;
 }
 
@@ -84,7 +85,7 @@
     background: yellow;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     opacity: 1;
     visibility: visible;
   }
